@@ -9,7 +9,8 @@ class Challenge {
 
   check(number) {
     this.answer = this.answer.toString()
-    if(number === this.answer) {
+    if(number === this.answer || outputClass.classList.contains('lose')) {
+      outputClass.classList.remove('lose')
       outputClass.classList.add('win')
     } else {
       outputClass.classList.add('lose')
